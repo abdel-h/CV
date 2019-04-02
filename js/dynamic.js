@@ -161,3 +161,11 @@ let li = work
         let value = `<li><span>${exp}</span><small>`;
         return value;
     });
+
+const name = d3
+    .select('.name')
+    .html(`${data[idEtu]['First Name']} ${data[idEtu]['Last Name']}`);
+const phone = d3.select('.call span').html(`${data[idEtu]['Phone Number']}`);
+const phone = d3
+    .select('.email span')
+    .html(`${data[idEtu]["Nom d'utulisateur"]}`);
