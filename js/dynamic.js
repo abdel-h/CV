@@ -157,15 +157,19 @@ let li = work
     .enter()
     .append('li')
     .html(d => {
-        let exp = data[idEtu][d];
-        let value = `<li><span>${exp}</span><small>`;
-        return value;
+        // experiences;
+        if (d.includes('Description')) {
+            let value = `<span>${data[idEtu][d]}</span>`;
+            return value;
+        }
+        return ``;
     });
 
+console.log(data);
 const name = d3
     .select('.name')
-    .html(`${data[idEtu]['First Name']} ${data[idEtu]['Last Name']}`);
+    .html(`${data[idEtu]['First name']} ${data[idEtu]['Last name']}`);
 const phone = d3.select('.call span').html(`${data[idEtu]['Phone Number']}`);
-const phone = d3
+const email = d3
     .select('.email span')
-    .html(`${data[idEtu]["Nom d'utulisateur"]}`);
+    .html(`${data[idEtu]["Nom d'utilisateur"]}`);
